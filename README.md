@@ -18,7 +18,7 @@
 - https://github.com/actions/starter-workflows/issues/171
 - https://stackoverflow.com/questions/17668265/gradlew-permission-denied
 
-### I then deleted the spring-gumball directory and moved it into the workflow directory. Workflow continued to fail so I deleted the spring-gumball directory from the workflow directory
+### I thought I was uploading my spring-gumball project to the wrong location so I deleted the spring-gumball directory and uploaded it into the .github/workflows directory. Workflow continued to fail so I deleted the spring-gumball directory from the .github/workflows directory
 ![image](https://user-images.githubusercontent.com/73510978/168511760-096671d9-e992-4808-a98e-0ccf55ad9582.png)
 
 ### I kept playing around with the gradle workflow but it kept failing I even created another simpler gradle workflow but it kept failing as well so I ended up deleting it. Eventually, I decided to watch an old demo video of the lab (which I probably should have done from the beginning) and realized that I should not have uploaded all of the spring-gumball files into one directory. Instead I uploaded them as pictured below:

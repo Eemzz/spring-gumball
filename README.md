@@ -24,6 +24,32 @@ After doing this, my gradle workflow finally ran successfully
 ![image](https://user-images.githubusercontent.com/73510978/168512406-3605ed6d-5577-40f7-884d-c3087f8d66f9.png)
 
 
+## CD Workflow (Part 2)
+
+Service account:
+![image](https://user-images.githubusercontent.com/73510978/168515278-60ff5143-e558-45ee-9c0d-b55e20c06324.png)
+Service account key:
+![image](https://user-images.githubusercontent.com/73510978/168515302-cd0e5ae6-87dd-4389-bd28-6ebfc6d05d69.png)
+Github action secrets set:
+![image](https://user-images.githubusercontent.com/73510978/168515367-168a884a-bc42-4836-afd6-4d236be4298b.png)
+Google workflow:
+![image](https://user-images.githubusercontent.com/73510978/168515150-570c2e6d-702d-4ce4-b515-b61162b3cc2f.png)
+After creating a release I ran into this error:
+![image](https://user-images.githubusercontent.com/73510978/168515944-899b33e2-472f-491b-b12c-da4cc5720cb4.png)
+I updated GKE_SA_KEY, reran then I got this error:
+![image](https://user-images.githubusercontent.com/73510978/168516325-c03e0ad9-bb8f-4cbf-bd86-7084ec42f8dc.png)
+while trying to figure out how to fix the problem I ended up deleting the key I generated for my service account and made a new one. I updated GKE_SA_KEY then reran the release and ran into the following problem:
+![image](https://user-images.githubusercontent.com/73510978/168520773-bda9fb12-3683-4c87-aba2-d06cfa0ccc28.png)
+
+I deleted the service account then made a new one and gave it the "owner" role. Then I created a new release. It resolved my issue but then I ran into another issue:
+![image](https://user-images.githubusercontent.com/73510978/168522390-897cdb78-e3b2-4609-803b-d855cdb8062b.png)
+
+I fixed my deployment.yaml file then reran the release but I got the same error again. So, I created another release and the workflow ran successfully:
+![image](https://user-images.githubusercontent.com/73510978/168523558-42e1ced0-0e54-42ba-b5d9-ea2c1f8d9be2.png)
+
+Successfull deployment in GKE:
+![image](https://user-images.githubusercontent.com/73510978/168523627-30a9073d-f44a-4669-b5ac-a10065fd99ed.png)
+![image](https://user-images.githubusercontent.com/73510978/168523587-591f2e5b-aaeb-4729-b775-e095977d598d.png)
 
 
 

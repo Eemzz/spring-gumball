@@ -1,6 +1,6 @@
 # spring-gumball
 ## CI Workflow (Part 1)
-#### Creating the workflow failed because I did not add the sping-gumball project to the repository before running the workflow
+### Creating the workflow failed because I did not add the sping-gumball project to the repository before running the workflow
 ![image](https://user-images.githubusercontent.com/73510978/168510171-ec08424a-19d1-40fa-a45d-38e94e90b1cf.png)
 ### You can see here that I uploaded files. I uploaded the spring-gumball project all in one directory into the repo (my repo had two directories: workflow and spring-gumball the gradlew file was inside the spring-gumball directory). The workflow run after uploading the spring-gumball project into the repo failed. It was still unable to locate the "gradlew" file.
 ![image](https://user-images.githubusercontent.com/73510978/168510884-a2434183-e229-4ba5-a0ae-e5c3ce92e80e.png)
